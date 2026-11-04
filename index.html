@@ -1,0 +1,245 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noche en Freddy's · Escape Room FNAF</title>
+<meta name="description" content="Evento fan-made de temática Five Nights at Freddy's: sobrevive cinco noches en una pizzería abandonada.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root{--noche:#14101a;--noche2:#1d1727;--rojo:#d80000;--rojo:#a3212b;--crema:#f3e6cf}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--noche);color:var(--crema);font-family:Georgia,"Times New Roman",serif;line-height:1.65;padding-top:56px}
+h1,h2,h3,h4,.navbar-brand{font-family:Rockwell,"Courier New",monospace;letter-spacing:.02em}
+.text-ambar{color:var(--rojo)} .bg-noche2{background:var(--noche2)}
+.btn-ambar{background:var(--rojo);border-color:var(--rojo);color:#1a1209;font-weight:700}
+.btn-ambar:hover{background:#800000;border-color:#c20000;color:#1a1209}
+.btn-outline-ambar{border-color:var(--rojo);color:var(--rojo)}
+.btn-outline-ambar:hover{background:var(--rojo);color:#1a1209}
+.navbar{background:rgba(20,16,26,.96)!important;border-bottom:1px solid rgba(232,163,61,.3)}
+.hero{background:radial-gradient(ellipse at 70% 30%,#33244a 0%,var(--noche) 65%)}
+.rec::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;background:var(--rojo);margin-right:.5em;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.rec::before{animation:none}html{scroll-behavior:auto}}
+.card{background:var(--noche2);border-color:rgba(232,163,61,.3)}
+.plan-top{border:2px solid var(--rojo)!important}
+.accordion{--bs-accordion-bg:var(--noche2);--bs-accordion-btn-bg:var(--noche2);--bs-accordion-active-bg:#2b2138;--bs-accordion-active-color:var(--rojo);--bs-accordion-border-color:rgba(232,163,61,.3)}
+.form-control,.form-select{background:#110d17}
+a:focus-visible,button:focus-visible,.form-control:focus{outline:3px solid var(--rojo);outline-offset:2px}
+footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
+</style>
+</head>
+<body>
+
+<!-- 1. NAVEGACIÓN -->
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Principal">
+ <div class="container">
+  <a class="navbar-brand fw-bold text-ambar" href="#inicio">Scape Room en Freddy's</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="menu">
+   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Experiencia</a></li>
+    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+    <li class="nav-item"><a class="nav-link" href="#opiniones">Opiniones</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+
+<main>
+<!-- 2. HERO -->
+<header id="inicio" class="hero container-fluid py-5">
+ <div class="container py-lg-5">
+  <div class="row align-items-center g-5">
+   <div class="col-12 col-lg-6">
+    <p class="rec text-danger fw-bold mb-2">REC - Turno de noche</p>
+    <h1 class="display-4 fw-bold">Sobrevive cinco noches en <span class="text-ambar">Freddy's</span></h1>
+    <p class="lead my-4">Un escape room de 1 hora en una pizzería abandonada. Vigila las cámaras, ahorra energía y no dejes que nadie entre en tu oficina mientras intentas escapar (ta guapa la idea fran, no me lo niegues).</p>
+    <div class="d-flex flex-wrap gap-3">
+     <a href="#planes" class="btn btn-ambar btn-lg">Reservar mi turno</a>
+     <a href="#galeria" class="btn btn-outline-light btn-lg">Ver las cámaras</a>
+    </div>
+   </div>
+   <div class="col-12 col-lg-6">
+    <img src="https://i.pinimg.com/1200x/ff/d2/c7/ffd2c7097855c1e25c2d3850be0eff7e.jpg" class="img-fluid rounded-4 shadow-lg border border-warning border-2" alt="Ilustración de un oso animatrónico en un escenario oscuro">
+   </div>
+  </div>
+ </div>
+</header>
+
+<!-- 3. CARACTERÍSTICAS -->
+<section id="caracteristicas" class="container py-5">
+ <h2 class="text-center mb-2">Qué te espera en el turno</h2>
+ <p class="text-center text-secondary mb-5">Tres retos pensados para equipos de 2 a 6 personas.</p>
+ <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Red de cámaras</h3><p class="mb-0">Cambia entre cinco cámaras en directo y descubre pistas antes de que se muevan los animatrónicos.</p></div></div></div>
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Energía limitada</h3><p class="mb-0">Luces y puertas consumen batería. Decidid en equipo qué apagar y cuándo cerrar.</p></div></div></div>
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Actores en vivo</h3><p class="mb-0">Personajes con disfraz recorren las salas. Ningún contacto físico: solo tensión.</p></div></div></div>
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Puzles de lógica</h3><p class="mb-0">Cerraduras, códigos y cintas de VHS ocultan la historia de la pizzería.</p></div></div></div>
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Zona de fiesta</h3><p class="mb-0">Al terminar, pizza y refrescos en el comedor decorado para celebrar que habéis sobrevivido.</p></div></div></div>
+  <div class="col"><div class="card h-100 shadow p-3 border rounded-3">
+   <div class="card-body"><h3 class="h4 text-ambar">Accesible</h3><p class="mb-0">Recorrido adaptado para personas con movilidad reducida.(Con acompañantes)</p></div></div></div>
+ </div>
+</section>
+
+<!-- 4. GALERÍA / CARRUSEL -->
+<section id="galeria" class="container-fluid bg-noche2 py-5">
+ <div class="container">
+  <h2 class="text-center mb-4">Las cámaras del local</h2>
+  <div class="row justify-content-center g-4">
+   <div class="col-12 col-xl-8">
+    <div id="carrusel" class="carousel slide shadow" data-bs-ride="carousel">
+     <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Cámara 2"></button>
+      <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Cámara 3"></button>
+      <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Cámara 4"></button>
+      <button type="button" data-bs-target="#carrusel" data-bs-slide-to="3" aria-label="Cámara 5"></button>
+     </div>
+     <div class="carousel-inner rounded-3">
+      <div class="carousel-item active"><img src="https://i.pinimg.com/736x/5a/10/8e/5a108e8da24faf74330fc778e385a4e4.jpg" class="d-block w-100" alt="Comedor de la pizzería"><div class="carousel-caption d-none d-md-block"><p class="bg-dark bg-opacity-80 rounded p-2 ">El comedor: aquí empieza todo.</p></div></div>
+      <div class="carousel-item"><img src="https://i.pinimg.com/736x/94/20/87/9420879c50cb857885036638db09744d.jpg" class="d-block w-100" alt="Pirate Cove con cortina roja"><div class="carousel-caption d-none d-md-block"><p class="bg-dark bg-opacity-80 rounded p-2">Pirate Cove: no la pierdas de vista.</p></div></div>
+      <div class="carousel-item"><img src="https://i.pinimg.com/736x/e0/41/78/e04178a0825a3c20fbfd0e37201d19c2.jpg" class="d-block w-100" alt="Pasillo este"><div class="carousel-caption d-none d-md-block"><p class="bg-dark bg-opacity-80 rounded p-2">El pasillo este y su luz parpadeante.</p></div></div>
+      <div class="carousel-item"><img src="https://i.pinimg.com/736x/bd/f1/74/bdf1742f84ad38bf6ef3fc88166dc634.jpg" class="d-block w-100" alt="Oficina del guardia"><div class="carousel-caption d-none d-md-block"><p class="bg-dark bg-opacity-80 rounded p-2">Tu oficina: único refugio.</p></div></div>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+     <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span></button>
+    </div>
+   </div>
+   <div class="col-12 col-xl-4">
+    <div class="row row-cols-2 row-cols-md-4 row-cols-xl-1 g-3">
+     <div class="col"><figure class="figure m-0"><img src="https://i.pinimg.com/736x/5a/10/8e/5a108e8da24faf74330fc778e385a4e4.jpg" class="figure-img img-fluid img-thumbnail" alt="Miniatura comedor"><figcaption class="figure-caption text-secondary">Cam 02 · Comedor</figcaption></figure></div>
+     <div class="col"><figure class="figure m-0"><img src="https://i.pinimg.com/736x/94/20/87/9420879c50cb857885036638db09744d.jpg" class="figure-img img-fluid img-thumbnail" alt="Miniatura Pirate Cove"><figcaption class="figure-caption text-secondary">Cam 03 · Pirate Cove</figcaption></figure></div>
+     <div class="col"><figure class="figure m-0"><img src="https://i.pinimg.com/736x/e0/41/78/e04178a0825a3c20fbfd0e37201d19c2.jpg" class="figure-img img-fluid img-thumbnail" alt="Miniatura pasillo"><figcaption class="figure-caption text-secondary">Cam 04 · Pasillo</figcaption></figure></div>
+     <div class="col"><figure class="figure m-0"><img src="https://i.pinimg.com/736x/bd/f1/74/bdf1742f84ad38bf6ef3fc88166dc634.jpg" class="figure-img img-fluid img-thumbnail" alt="Miniatura oficina"><figcaption class="figure-caption text-secondary">Cam 05 · Oficina</figcaption></figure></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 5. PLANES -->
+<section id="planes" class="container py-5">
+ <h2 class="text-center mb-2">Planes y precios</h2>
+ <p class="text-center text-secondary mb-4">Precio por persona, IVA incluido.</p>
+ <div class="row justify-content-center">
+  <div class="col-12 col-xl-10 col-xxl-9">
+   <div class="table-responsive shadow rounded-3 border">
+    <table class="table table-dark table-bordered table-hover align-middle text-center mb-0">
+     <thead>
+      <tr><th scope="col" class="text-start">Incluye</th><th scope="col">Turno de día</th><th scope="col" class="plan-top text-bg-warning">Noche completa<br><small>Más popular</small></th><th scope="col">Guardia 20/20/20/20</th></tr>
+     </thead>
+     <tbody>
+      <tr><th scope="row" class="text-start">Precio</th><td class="fs-5">15 €</td><td class="fs-4 fw-bold text-ambar">22 €</td><td class="fs-5">35 €</td></tr>
+      <tr><th scope="row" class="text-start">Duración</th><td>45 min</td><td>60 min</td><td>90 min</td></tr>
+      <tr><th scope="row" class="text-start">Actores en vivo</th><td>✖</td><td>✔</td><td>✔</td></tr>
+      <tr><th scope="row" class="text-start">Pizza y refresco</th><td>✖</td><td>✔</td><td>✔</td></tr>
+      <tr><th scope="row" class="text-start">Camiseta y foto</th><td>✖</td><td>✖</td><td>✔</td></tr>
+      <tr><td></td><td><a href="#contacto" class="btn btn-outline-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-outline-ambar">Elegir</a></td></tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="btn-group mt-4 d-flex justify-content-center" role="group" aria-label="Filtrar por tamaño de grupo">
+    <a href="#contacto" class="btn btn-outline-light">2-3 personas</a>
+    <a href="#contacto" class="btn btn-outline-light">4-5 personas</a>
+    <a href="#contacto" class="btn btn-outline-light">6 personas</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 6. FAQ -->
+<section id="faq" class="container-fluid bg-noche2 py-5">
+ <div class="container">
+  <h2 class="text-center mb-4">Preguntas frecuentes</h2>
+  <div class="row justify-content-center"><div class="col-12 col-lg-9">
+   <div class="accordion shadow" id="faqAcc">
+    <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="true" aria-controls="f1">¿Da mucho miedo?</button></h3>
+     <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Te vas a cagar, los trabajadores les encanta asustar a niños y adultos por igual.</div></div></div>
+    <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false" aria-controls="f2">¿Qué edad mínima hay?</button></h3>
+     <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Desde 12 años acompañados por un adulto. A partir de 16 pueden entrar solos.</div></div></div>
+    <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false" aria-controls="f3">¿Puedo cancelar mi reserva?</button></h3>
+     <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Sí, gratis hasta 48 horas antes. Después se devuelve el 50 %.</div></div></div>
+    <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false" aria-controls="f4">¿Es un producto oficial?</button></h3>
+     <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">No. Es un proyecto de fans, ficticio y sin ánimo de lucro. Five Nights at Freddy's pertenece a Scott Cawthon.</div></div></div>
+   </div>
+  </div></div>
+ </div>
+</section>
+
+<!-- 7. OPINIONES -->
+<section id="opiniones" class="container py-5">
+ <h2 class="text-center mb-4">Lo que dicen los supervivientes</h2>
+ <div class="alert alert-warning d-flex align-items-center" role="alert">
+  <span class="me-2">⚠️</span><div>Aviso: el 92 % de los grupos no llega a la quinta noche. ¡Entrenad antes!</div>
+ </div>
+ <div class="row g-4 mt-1">
+  <div class="col-12 col-md-4"><div class="card h-100 shadow border rounded-3 p-3"><div class="card-body">
+   <span class="badge text-bg-success mb-2">Compra verificada</span>
+   <p>"Lo mejor del cumpleaños de mi hijo. Los actores clavan el ambiente."</p><p class="mb-0 text-ambar fw-bold">Lucía M. · ★★★★★</p></div></div></div>
+  <div class="col-12 col-md-4"><div class="card h-100 shadow border rounded-3 p-3"><div class="card-body">
+   <span class="badge text-bg-danger mb-2">Superó la noche 5</span>
+   <p>"Tardamos 58 minutos y casi nos quedamos sin batería. Rejugable."</p><p class="mb-0 text-ambar fw-bold">Álvaro R. · ★★★★★</p></div></div></div>
+  <div class="col-12 col-md-4"><div class="card h-100 shadow border rounded-3 p-3"><div class="card-body">
+   <span class="badge text-bg-info mb-2">Plan Guardia VIP</span>
+   <p>"La camiseta y la foto final son un detalle genial. Algún puzle es difícil."</p><p class="mb-0 text-ambar fw-bold">Sara P. · ★★★★☆</p></div></div></div>
+ </div>
+</section>
+
+<!-- 8. CONTACTO -->
+<section id="contacto" class="container-fluid bg-noche2 py-5">
+ <div class="container">
+  <h2 class="text-center mb-4">Reserva tu turno</h2>
+  <div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8">
+   <form class="row g-3 needs-validation border rounded-3 p-4 shadow" novalidate>
+    <div class="col-md-6"><label for="nombre" class="form-label">Nombre completo</label><input type="text" class="form-control" id="nombre" required minlength="3"><div class="invalid-feedback">Escribe tu nombre (mínimo 3 letras).</div></div>
+    <div class="col-md-6"><label for="email" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="email" required><div class="invalid-feedback">Introduce un correo válido.</div></div>
+    <div class="col-md-6"><label for="tel" class="form-label">Teléfono</label><input type="tel" class="form-control" id="tel" pattern="[0-9 +]{9,15}" required><div class="invalid-feedback">Teléfono de 9 a 15 dígitos.</div></div>
+    <div class="col-md-6"><label for="fecha" class="form-label">Fecha</label><input type="date" class="form-control" id="fecha" required><div class="invalid-feedback">Elige una fecha.</div></div>
+    <div class="col-md-6"><label for="plan" class="form-label">Plan</label><select class="form-select" id="plan" required><option value="">Elige un plan…</option><option>Turno de día</option><option>Noche completa</option><option>Guardia VIP</option></select><div class="invalid-feedback">Selecciona un plan.</div></div>
+    <div class="col-md-6"><label for="pers" class="form-label">Personas (2-6)</label><input type="number" class="form-control" id="pers" min="2" max="6" required><div class="invalid-feedback">Entre 2 y 6 personas.</div></div>
+    <div class="col-12"><label for="msg" class="form-label">Mensaje</label><textarea class="form-control" id="msg" rows="3" placeholder="Alergias, cumpleaños, accesibilidad…"></textarea></div>
+    <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="acepto" required><label class="form-check-label" for="acepto">Acepto el <a href="#aviso" class="text-ambar">aviso legal</a>.</label><div class="invalid-feedback">Debes aceptar el aviso legal.</div></div></div>
+    <div class="col-12"><button class="btn btn-ambar btn-lg" type="submit">Enviar reserva</button></div>
+    <div class="col-12"><div id="ok" class="alert alert-success d-none mb-0" role="status">¡Reserva enviada! Te escribiremos en 24 horas.</div></div>
+   </form>
+  </div></div>
+ </div>
+</section>
+</main>
+
+<!-- 9. FOOTER -->
+<footer class="container-fluid text-bg-dark py-5 border-top border-warning">
+ <div class="container">
+  <div class="row g-4">
+   <div class="col-12 col-md-4"><h3 class="h5 text-ambar">Noche en Freddy's</h3><p>Proyecto fan-made de ejemplo. Madrid, España.</p></div>
+   <div class="col-6 col-md-4"><h3 class="h5 text-ambar">Enlaces</h3><ul class="list-unstyled"><li><a href="#caracteristicas">Experiencia</a></li><li><a href="#planes">Planes</a></li><li><a href="#faq">Preguntas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+   <div class="col-6 col-md-4"><h3 class="h5 text-ambar">Síguenos</h3><ul class="list-unstyled"><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">YouTube</a></li></ul></div>
+  </div>
+  <hr>
+  <p id="aviso" class="small text-secondary mb-2"><strong>Aviso legal:</strong> proyecto académico ficticio, sin ánimo de lucro ni relación con Scott Cawthon ni Steel Wool Studios. Five Nights at Freddy's es marca de sus legítimos propietarios. Los precios y reservas no son reales.</p>
+  <p class="small text-secondary mb-0"><strong>Procedencia de imágenes:</strong> todas las ilustraciones son SVG de creación propia, incrustadas en el código. Framework: Bootstrap 5.3.3 (licencia MIT), cargado desde jsDelivr.</p>
+ </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('.needs-validation').forEach(f=>{
+ f.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(f.checkValidity()){document.getElementById('ok').classList.remove('d-none');f.reset();f.classList.remove('was-validated');}
+  else{f.classList.add('was-validated');}
+ });
+});
+</script>
+</body>
+</html>
