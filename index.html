@@ -8,27 +8,35 @@
 <title>Noche en Freddy's · Escape Room FNAF</title>
 <meta name="description" content="Evento fan-made de temática Five Nights at Freddy's: sobrevive cinco noches en una pizzería abandonada.">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap" rel="stylesheet">
 <style>
-:root{--noche:#14101a;--noche2:#1d1727;--rojo:#d80000;--rojo:#a3212b;--crema:#f3e6cf}
+:root,[data-bs-theme=dark]{--noche:#14101a;--noche2:#1d1727;--rojo:#8a0303;--rojo-txt:#d4131b;--crema:#f3e6cf;--bs-danger-rgb:138,3,3;--borde:#5c0a0a;--borde-fuerte:#4a0000;--bs-border-color:#5c0a0a}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--noche);color:var(--crema);font-family:Georgia,"Times New Roman",serif;line-height:1.65;padding-top:56px}
-h1,h2,h3,h4,.navbar-brand{font-family:Rockwell,"Courier New",monospace;letter-spacing:.02em}
-.text-ambar{color:var(--rojo)} .bg-noche2{background:var(--noche2)}
-.btn-ambar{background:var(--rojo);border-color:var(--rojo);color:#1a1209;font-weight:700}
-.btn-ambar:hover{background:#800000;border-color:#c20000;color:#1a1209}
-.btn-outline-ambar{border-color:var(--rojo);color:var(--rojo)}
-.btn-outline-ambar:hover{background:var(--rojo);color:#1a1209}
-.navbar{background:rgba(20,16,26,.96)!important;border-bottom:1px solid rgba(232,163,61,.3)}
+body{background:var(--noche);color:var(--crema);font-family:"Special Elite","Courier New",Georgia,monospace;line-height:1.7;padding-top:56px}
+h1,h2,h3,h4,.navbar-brand,.accordion-button,.btn,th{font-family:Creepster,"Special Elite",cursive;font-weight:400!important;letter-spacing:.06em}
+h1,h2,h3,h4,.navbar-brand{text-shadow:2px 2px 0 #3a0000}
+.btn{letter-spacing:.1em}
+.text-ambar{color:var(--rojo-txt)} .bg-noche2{background:var(--noche2)}
+.btn-ambar{background:var(--rojo);border-color:var(--borde-fuerte);color:#fff;font-weight:700}
+.btn-ambar:hover{background:#5c0000;border-color:var(--borde-fuerte);color:#fff}
+.btn-outline-ambar{border-color:var(--borde-fuerte);color:var(--rojo-txt)}
+.btn-outline-ambar:hover{background:var(--rojo);color:#fff}
+.navbar{background:rgba(20,16,26,.96)!important;border-bottom:1px solid var(--borde)}
 .hero{background:radial-gradient(ellipse at 70% 30%,#33244a 0%,var(--noche) 65%)}
-.rec::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;background:var(--rojo);margin-right:.5em;animation:blink 1.2s steps(2) infinite}
+.rec::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;background:var(--rojo-txt);margin-right:.5em;animation:blink 1.2s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.rec::before{animation:none}html{scroll-behavior:auto}}
-.card{background:var(--noche2);border-color:rgba(232,163,61,.3)}
-.plan-top{border:2px solid var(--rojo)!important}
-.accordion{--bs-accordion-bg:var(--noche2);--bs-accordion-btn-bg:var(--noche2);--bs-accordion-active-bg:#2b2138;--bs-accordion-active-color:var(--rojo);--bs-accordion-border-color:rgba(232,163,61,.3)}
+.card{background:var(--noche2);border-color:var(--borde)}
+.plan-top{border:2px solid var(--borde-fuerte)!important;background:var(--rojo)!important;color:#fff!important}
+.rec{color:var(--rojo-txt)!important}
+.carousel-caption,.carousel-caption p,#galeria .figure-caption{color:#fff!important}
+.border-danger{border-color:var(--borde-fuerte)!important}
+.accordion{--bs-accordion-bg:var(--noche2);--bs-accordion-btn-bg:var(--noche2);--bs-accordion-active-bg:#2b2138;--bs-accordion-active-color:var(--rojo-txt);--bs-accordion-border-color:var(--borde)}
 .form-control,.form-select{background:#110d17}
-a:focus-visible,button:focus-visible,.form-control:focus{outline:3px solid var(--rojo);outline-offset:2px}
-footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
+a:focus-visible,button:focus-visible,.form-control:focus{outline:3px solid var(--rojo-txt);outline-offset:2px}
+footer a{color:var(--crema)} footer a:hover{color:var(--rojo-txt)}
 </style>
 </head>
 <body>
@@ -66,7 +74,7 @@ footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
     </div>
    </div>
    <div class="col-12 col-lg-6">
-    <img src="https://i.pinimg.com/1200x/ff/d2/c7/ffd2c7097855c1e25c2d3850be0eff7e.jpg" class="img-fluid rounded-4 shadow-lg border border-warning border-2" alt="Ilustración de un oso animatrónico en un escenario oscuro">
+    <img src="https://i.pinimg.com/1200x/ff/d2/c7/ffd2c7097855c1e25c2d3850be0eff7e.jpg" class="img-fluid rounded-4 shadow-lg border border-danger border-2" alt="Ilustración de un oso animatrónico en un escenario oscuro">
    </div>
   </div>
  </div>
@@ -136,7 +144,7 @@ footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
    <div class="table-responsive shadow rounded-3 border">
     <table class="table table-dark table-bordered table-hover align-middle text-center mb-0">
      <thead>
-      <tr><th scope="col" class="text-start">Incluye</th><th scope="col">Turno de día</th><th scope="col" class="plan-top text-bg-warning">Noche completa<br><small>Más popular</small></th><th scope="col">Guardia 20/20/20/20</th></tr>
+      <tr><th scope="col" class="text-start">Incluye</th><th scope="col">Turno de día</th><th scope="col" class="plan-top text-bg-danger">Noche completa<br><small>Más popular</small></th><th scope="col">Guardia 20/20/20/20</th></tr>
      </thead>
      <tbody>
       <tr><th scope="row" class="text-start">Precio</th><td class="fs-5">15 €</td><td class="fs-4 fw-bold text-ambar">22 €</td><td class="fs-5">35 €</td></tr>
@@ -144,7 +152,7 @@ footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
       <tr><th scope="row" class="text-start">Actores en vivo</th><td>✖</td><td>✔</td><td>✔</td></tr>
       <tr><th scope="row" class="text-start">Pizza y refresco</th><td>✖</td><td>✔</td><td>✔</td></tr>
       <tr><th scope="row" class="text-start">Camiseta y foto</th><td>✖</td><td>✖</td><td>✔</td></tr>
-      <tr><td></td><td><a href="#contacto" class="btn btn-outline-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-outline-ambar">Elegir</a></td></tr>
+      <tr><td></td><td><a href="#contacto" class="btn btn-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-ambar">Elegir</a></td><td><a href="#contacto" class="btn btn-ambar">Elegir</a></td></tr>
      </tbody>
     </table>
    </div>
@@ -185,7 +193,7 @@ footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
  <div class="row g-4 mt-1">
   <div class="col-12 col-md-4"><div class="card h-100 shadow border rounded-3 p-3"><div class="card-body">
    <span class="badge text-bg-success mb-2">Compra verificada</span>
-   <p>"Lo mejor del cumpleaños de mi hijo. Los actores clavan el ambiente."</p><p class="mb-0 text-ambar fw-bold">Lucía M. · ★★★★★</p></div></div></div>
+   <p>"Lo mejor del cumpleaños de mi hijo. Los actores clavan el ambiente. Mi hijo se meo de miedo, literalmente :D"</p><p class="mb-0 text-ambar fw-bold">Lucía M. · ★★★★★</p></div></div></div>
   <div class="col-12 col-md-4"><div class="card h-100 shadow border rounded-3 p-3"><div class="card-body">
    <span class="badge text-bg-danger mb-2">Superó la noche 5</span>
    <p>"Tardamos 58 minutos y casi nos quedamos sin batería. Rejugable."</p><p class="mb-0 text-ambar fw-bold">Álvaro R. · ★★★★★</p></div></div></div>
@@ -218,7 +226,7 @@ footer a{color:var(--crema)} footer a:hover{color:var(--rojo)}
 </main>
 
 <!-- 9. FOOTER -->
-<footer class="container-fluid text-bg-dark py-5 border-top border-warning">
+<footer class="container-fluid text-bg-dark py-5 border-top border-danger">
  <div class="container">
   <div class="row g-4">
    <div class="col-12 col-md-4"><h3 class="h5 text-ambar">Noche en Freddy's</h3><p>Proyecto fan-made de ejemplo. Madrid, España.</p></div>
